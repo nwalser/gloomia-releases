@@ -1,0 +1,88 @@
+name: Wallpaper request
+description: Suggest a new live wallpaper for Gloomia
+title: "[Wallpaper] "
+labels: ["wallpaper-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a wallpaper! The more specific you are about what it should show and how it should move, the better the chance it ships.
+
+  - type: input
+    id: wallpaper-name
+    attributes:
+      label: Wallpaper name
+      description: A short name for the wallpaper (e.g. "Lava Lamp", "Rainy Window", "Lo-fi Room").
+      placeholder: e.g. Rainy Window
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-it-shows
+    attributes:
+      label: What should the wallpaper show?
+      description: Describe the scene, the motion, and the mood. Mock-ups, screenshots, videos, or links to similar wallpapers are welcome.
+      placeholder: |
+        - A window with rain running down the glass at night
+        - Soft city lights blurred in the background
+        - Drops speed up when it "rains harder"
+    validations:
+      required: true
+
+  - type: textarea
+    id: settings
+    attributes:
+      label: What should be adjustable?
+      description: List the knobs you'd want — speed, colours, density, palettes, toggles, etc.
+      placeholder: |
+        - Rain intensity
+        - Background colour / palette
+        - Day / night
+        - Lightning on or off
+    validations:
+      required: false
+
+  - type: dropdown
+    id: reactive
+    attributes:
+      label: Should it react to anything live?
+      description: Many Gloomia wallpapers respond to live data. Pick what fits, or "Just animated".
+      multiple: true
+      options:
+        - Just animated (no live data)
+        - System stats (CPU / GPU / RAM)
+        - System audio / music
+        - Weather
+        - Time of day / clock
+        - Network / internet data
+        - Mouse / clicks
+    validations:
+      required: false
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would this wallpaper be useful?
+      description: What makes it appealing? Who else would use it?
+      placeholder: A calm rainy window is the kind of thing I'd happily leave running all day while I work.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this for you?
+      options:
+        - Nice to have
+        - Would use it often
+        - Would change whether I keep using Gloomia
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and didn't find a duplicate request.
+          required: true
