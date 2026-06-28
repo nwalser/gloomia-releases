@@ -4,8 +4,6 @@
 
 [Website](https://gloomia.app) · [Download](https://github.com/nwalser/gloomia-releases/releases/latest) · [Changelog](https://gloomia.app/changelog) · [Report a bug](https://github.com/nwalser/gloomia-releases/issues)
 
-<img src=".github/assets/hero.svg" alt="Gloomia live wallpapers on a Windows desktop" width="900" />
-
 ---
 
 ## Wallpapers
